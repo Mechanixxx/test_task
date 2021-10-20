@@ -1,0 +1,5 @@
+---
+- hosts: servers_group
+  become: true
+  roles:
+    - my_role

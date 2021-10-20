@@ -1,0 +1,27 @@
+---
+- name: Create directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+  with_items:
+    - "/opt/dir_01"
+    - "/opt/dir_02"
+
+- name: Copy file
+  copy:
+    src: "filename.txt"
+    dest: "/opt/dir_01/filename.txt"
+    mode: 0755
+
+- name: Copy template
+  template:
+    src: "my_file.txt.j2"
+    dest: "/opt/dir_02/my_file.txt"
+
+- name: Add cron job for date
+  cron:
+    name: show_date
+    minute: "*"
+    job: date
