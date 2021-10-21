@@ -1,0 +1,7 @@
+1.
+1.1 ls -la | tee /tmp/ls_exist_dir.txt
+1.2 ls -la /noexist_dir | tee /tmp/ls_none_exist_dir.txt
+1.3 	a) ssh keygen (создаем пару ключей id_rsa и id_rsa.pub, для примера директория будет /home/<username>/.ssh, пароль задавать не будем)
+	b) ssh-copy-id -i /home/<username>/.ssh/id_rsa.pub <username>@server-one - прописываем id ключа на удаленном сервере в файл authorized_keys
+	с) ssh <username>@server-one - подключаемся
+
