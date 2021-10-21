@@ -4,5 +4,6 @@ services:
     ports:
       - "8080:80"
     image: nginx:stable
-    #volumes: 
-     #- site/index.html:/usr/share/nginx/site/index.html
+    volumes: 
+      - "./site/index.html:/usr/share/nginx/site/index.html"
+      - "./my_site.conf:/etc/nginx/nginx.conf"
