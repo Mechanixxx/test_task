@@ -479,8 +479,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "f3.mydomain.com",
-          "value": "f3.mydomain.com"
+          "text": "nginx-exporter",
+          "value": "nginx-exporter"
         },
         "datasource": "Prometheus",
         "definition": "label_values(nginx_up{job=~\"$job\"}, instance)",
