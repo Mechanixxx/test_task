@@ -69,13 +69,9 @@ services:
     image: telegraf
     container_name: telegraf
     environment:
-      - "INFLUX_TOKEN=0t1AW7w8ehHIjxMZh3arx5p1RGzB2M6vd7ESM84RDB7umHJt9neBsNogQbiFilJEr4wUAgbrAUST8KpzVVS9RQ=="
-    depends_on:
-      - influxdb
+      - "INFLUX_TOKEN=TOOGqL4H3QT7kimxrJDvTu_hpcKE9b_fXaPVLMrw13V2hP_tI73WcHfxUvivsGdC1ooMmnY1K5TIHu3dUyaFZw=="
     ports:
       - "8125:8125/udp"
-    links:
-      - influxdb
     networks:
       - frontend
     volumes:
