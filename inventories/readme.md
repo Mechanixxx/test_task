@@ -6,7 +6,8 @@
 
 Роль присутствует, шаблон работает.
 
-Запускаем по очереди scenario_one, scenario_two
+1. Настраиваем доступ к машинкам по ssh-ключам
+2. Запускаем по очереди scenario_one, scenario_two
 
 ```
 ansible-playbook -i inventoies/prod/hosts inventories/prod/scenario_one.yml
