@@ -46,6 +46,7 @@ services:
       - prometheus
     ports:
       - "3000:3000"
+      - "8086:8086"
     volumes:
       - "./grafana/provisioning:/etc/grafana/provisioning"
       - "./grafana/grafana.ini:/etc/grafana/grafana.ini"
@@ -54,11 +55,20 @@ services:
 
   influxDB:
     image: influxdb
-    container_name: influxDB
+    container_name: influxdb
     ports:
       - "8086:8086"
     networks:
       - frontend
+  
+  telegraf:
+    image: telegraf
+    container_name: telegraf
+    networks:
+      - frontend
+    volumes:
+      - "./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf"
+    
     
 
 networks:
