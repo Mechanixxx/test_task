@@ -64,6 +64,8 @@ services:
   telegraf:
     image: telegraf
     container_name: telegraf
+    environment:
+      - "export INFLUX_TOKEN=kSHVEjJN1b_RHkZGwKL0sKLiAxdLaHtp61RKiCE8BObrf6NheJqUtMx_4Jh04OhqDetFNIIl8RvmdQqOedspUg=="
     networks:
       - frontend
     volumes:
