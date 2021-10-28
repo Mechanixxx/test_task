@@ -50,6 +50,7 @@ services:
     volumes:
       - "./grafana/provisioning:/etc/grafana/provisioning"
       - "./grafana/grafana.ini:/etc/grafana/grafana.ini"
+      - "./grafana/dashboards:/var/lib/grafana/dashboards"
     networks:
       - frontend
 
@@ -60,6 +61,8 @@ services:
       - "INFLUXDB_DB=telegraf"
       - "INFLUXDB_ADMIN_USER=admin"
       - "INFLUXDB_ADMIN_PASSWORD=admin"
+    volumes:
+      - "./influxdb/influxdb.tml:"
     ports:
       - "8086:8086"
     networks:
@@ -70,10 +73,16 @@ services:
     container_name: telegraf
     environment:
       - "INFLUX_TOKEN=0t1AW7w8ehHIjxMZh3arx5p1RGzB2M6vd7ESM84RDB7umHJt9neBsNogQbiFilJEr4wUAgbrAUST8KpzVVS9RQ=="
+    depends_on:
+      - influxdb
+    ports:
+      - "8125:8125/udp"
+    links:
+      - influxdb
     networks:
       - frontend
     volumes:
-      - "./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf"
+      - "./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro"
     
     
 
