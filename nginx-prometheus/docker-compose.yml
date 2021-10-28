@@ -61,8 +61,6 @@ services:
       - "INFLUXDB_DB=telegraf"
       - "INFLUXDB_ADMIN_USER=admin"
       - "INFLUXDB_ADMIN_PASSWORD=admin"
-    volumes:
-      - "./influxdb/influxdb.tml:"
     ports:
       - "8086:8086"
     networks:
