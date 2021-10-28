@@ -54,7 +54,7 @@ services:
       - frontend
 
   influxdb:
-    image: influxdb
+    image: influxdb:1.8
     container_name: influxdb
     environment:
       - "INFLUXDB_DB=influx"
