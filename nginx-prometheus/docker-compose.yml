@@ -69,7 +69,7 @@ services:
     image: telegraf
     container_name: telegraf
     environment:
-      #- "INFLUX_TOKEN=kSHVEjJN1b_RHkZGwKL0sKLiAxdLaHtp61RKiCE8BObrf6NheJqUtMx_4Jh04OhqDetFNIIl8RvmdQqOedspUg=="
+      - "INFLUX_TOKEN=0t1AW7w8ehHIjxMZh3arx5p1RGzB2M6vd7ESM84RDB7umHJt9neBsNogQbiFilJEr4wUAgbrAUST8KpzVVS9RQ=="
     networks:
       - frontend
     volumes:
