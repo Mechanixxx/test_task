@@ -18,3 +18,6 @@ ls -la /noexist_dir | tee /tmp/ls_none_exist_dir.txt
 	с) ssh <username>@server-one - подключаемся
 ```
 
+#### UPD: Добавлен сервис монтиторинга погоды (использовал API Open Weather)  
+
+Cтек Telegraf, UnfluxDB, Grafana
