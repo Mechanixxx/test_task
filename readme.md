@@ -20,4 +20,4 @@ ls -la /noexist_dir | tee /tmp/ls_none_exist_dir.txt
 
 #### UPD: Добавлен сервис монтиторинга погоды (использовал API Open Weather)  
 
-Cтек Telegraf, UnfluxDB, Grafana
+Cтек Telegraf, InfluxDB, Grafana + дашборд Open Weather.
