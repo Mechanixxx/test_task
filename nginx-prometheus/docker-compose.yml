@@ -47,7 +47,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - "./grafana/provisioning:/etc/grafana/provisioning"
+      - "./grafana/provisioning/datasources/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml"
       - "./grafana/grafana.ini:/etc/grafana/grafana.ini"
       - "./grafana/dashboards:/var/lib/grafana/dashboards"
     networks:
