@@ -55,5 +55,5 @@ datasources:
   user: admin
   password: 123QWEasd
   url: http://influxdb:8086
-  isDefault: true
+  isDefault: false
   editable: true

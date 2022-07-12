@@ -49,7 +49,8 @@ services:
     volumes:
       - "./grafana/provisioning/datasources/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml"
       - "./grafana/grafana.ini:/etc/grafana/grafana.ini"
-      - "./grafana/dashboards:/var/lib/grafana/dashboards"
+      - "./grafana/dashboards/Nginx-dashboard.json:/var/lib/grafana/dashboards/Nginx-dashboard.json"
+      - "./grafana/dashboards/open-weather-map_rev2.json:/var/lib/grafana/dashboards/open-weather-map_rev2.json"
     networks:
       - frontend
 
